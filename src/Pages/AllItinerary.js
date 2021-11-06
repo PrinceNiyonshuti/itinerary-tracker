@@ -23,7 +23,7 @@ function AllItinerary() {
 	// Remove Itenerary
 	const deleteItenary = (ItenaryId) => {
 
-		const deleteItenerary = fetch(
+		fetch(
 			`http://localhost:8000/itenaryList/` + ItenaryId,
 			{
 				method: "DELETE",

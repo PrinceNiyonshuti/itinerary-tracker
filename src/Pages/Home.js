@@ -9,7 +9,7 @@ const Home = () => {
 
 	// Retrieve all Itenerary
 	useEffect(() => {
-		fetch(`http://localhost:8000/itenaryList`)
+		fetch(`http://localhost:8000/itenaryList/?_limit=2`)
 			.then((res) => {
 				return res.json();
 			})
@@ -20,13 +20,10 @@ const Home = () => {
 
 	// Delete Itenerary
 	const deleteItenary = (ItenaryId) => {
-		const deleteItenerary = fetch(
-			`http://localhost:8000/itenaryList/` + ItenaryId,
-			{
-				method: "DELETE",
-			}
-		).then(() => {
-			console.log("Itenary Deleted");
+		fetch(`http://localhost:8000/itenaryList/` + ItenaryId, {
+			method: "DELETE",
+		}).then(() => {
+			console.log("Itinerary Deleted");
 			navigate("/");
 		});
 	};

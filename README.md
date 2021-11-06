@@ -6,7 +6,7 @@
 
 - Adding data to array from another components
 - maintaining the state of the components when you add or delete new data
-- failed to build the project on Netlify
+- failed to build the project on Netlify due to some rendering and use effect issue [FixedNow]
 
 ## Findings
 
@@ -14,10 +14,12 @@
 - using Json Server to hold data to be used while fetching them like an API
 - using Reach history to reload or push to a new route using the history prop
 - handling and mastering use of the state and conditional rendering
+- render by limits
+- concatinate script to watch json server and run app into single script
 
 # 2. Time Taken to Complete
 
-- its been 5 to 7 hours working on the project
+- its been 2 to 3 hours working on the project
 
 # 3. Your coding style and standards
 
@@ -51,7 +53,6 @@ before running the project first initialize the project to get tailwindcss modul
 
 ## Documentation
 
-### To Run Json Server [to run the json data and watch the array data]()
+### To Run the app use
 
-    1. npm run db
-    2. npm run start
+    1. npm run prince

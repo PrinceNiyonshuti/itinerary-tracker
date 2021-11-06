@@ -31,6 +31,8 @@ const AddItenary = () => {
 			console.log("New Itinerary added");
 			history("/");
 		});
+
+		itenaryForm.current.reset();
 	};
 	return (
 		<div>
@@ -45,7 +47,7 @@ const AddItenary = () => {
 								required
 								ref={itenaryTitle}
 								className="border p-2 rounded w-full"
-								placeholder="Itenary Title"
+								placeholder="Itinerary Title"
 							/>
 						</div>
 						<div className=" p-3 w-full">
@@ -55,7 +57,6 @@ const AddItenary = () => {
 								required
 								ref={itenaryDate}
 								className="border p-2 rounded w-full"
-								placeholder="Itenary Date"
 							/>
 						</div>
 						<div className=" p-3 w-full">
@@ -65,7 +66,6 @@ const AddItenary = () => {
 								required
 								ref={itenaryTime}
 								className="border p-2 rounded w-full"
-								placeholder="Itenary Time"
 							/>
 						</div>
 						<div className=" p-3 w-full">
