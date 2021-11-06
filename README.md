@@ -28,8 +28,8 @@
 
 # 4. Your source code files plus the final (e.g. compiled) result that can be opened directly in a browser
 
-[Link To Repository](https://github.com/PrinceNiyonshuti/itenary-tracker-v2)
-[Link To Deployed App](https://itenerary-v2.netlify.app/)
+[Link To Repository](https://github.com/PrinceNiyonshuti/itinerary-tracker.git)
+[Link To Deployed App](https://itinerary-v3.netlify.app/)
 
 # 5. Documentation of your code where necessary
 
