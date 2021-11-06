@@ -1,41 +1,33 @@
 /** @format */
 
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
-import Title from "./Title";
-import Main from "./Main";
-import AddItenary from "./AddItenary";
-import Itenary from "./Itenary";
+import { Route, Routes } from "react-router-dom";
+import Home from "../Pages/Home";
+import About from "../Pages/About";
+import Additinerary from "../Pages/AddItinerary";
+import AllItinerary from "../Pages/AllItinerary";
+import Contact from "../Pages/Contact";
 import Footer from "./Footer";
-import About from "./About";
+import Title from "./Title";
 
-const Layout = () => {
+function Layout() {
 	return (
-		<Router>
-			<div className="">
-				<div className="flex items-center justify-center w-screen mt-10 ">
-					<div className="w-2/4 font-bold border shadow-lg p-4">
-						<Title />
-						<Switch>
-							<Route exact path="/">
-								<Main />
-							</Route>
-							<Route exact path="/about">
-								<About />
-							</Route>
-							<Route path="/add">
-								<AddItenary />
-							</Route>
-							<Route path="/itenary/:id">
-								<Itenary />
-							</Route>
-						</Switch>
-						<Footer />
-					</div>
+		<div className="">
+			<div className="flex items-center justify-center w-screen mt-10 ">
+				<div className="w-2/4 font-bold border shadow-lg p-4">
+					<Title />
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/about" element={<About />} />
+						<Route path="/contact" element={<Contact />} />
+						<Route path="/Add" element={<Additinerary />} />
+						<Route path="/All" element={<AllItinerary />} />
+					</Routes>
+					<Footer />
 				</div>
 			</div>
-		</Router>
+		</div>
 	);
-};
+}
+
 export default Layout;

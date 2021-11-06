@@ -20,7 +20,7 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"db": "json-server --watch data/db.json --port 8000",
-		"itinerary": "concurrently \"npm run start\"\"npm run db\""
+		"prince": "concurrently \"npm run start\" \"npm run db\""
 	},
 	"eslintConfig": {
 		"extends": [

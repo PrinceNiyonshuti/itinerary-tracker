@@ -54,4 +54,4 @@ before running the project first initialize the project to get tailwindcss modul
 ### To Run Json Server [to run the json data and watch the array data]()
 
     1. npm run db
-    2.npm run start
+    2. npm run start
