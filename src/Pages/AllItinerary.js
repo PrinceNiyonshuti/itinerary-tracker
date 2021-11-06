@@ -1,11 +1,13 @@
 /** @format */
 
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Itenaries from "../Components/Itenaries";
 
+
 function AllItinerary() {
-	const [itenaryData, setItenaryData] = useState(null);
+    const [itenaryData, setItenaryData] = useState(null);
+    const navigate = useNavigate();
 
 	// Retrieve all Itenerary
 	useEffect(() => {
@@ -27,10 +29,9 @@ function AllItinerary() {
 				method: "DELETE",
 			}
 		).then(() => {
-			console.log("Itenary Deleted");
-			window.location.reload();
+            console.log("Itenary Deleted");
+            navigate("/")
 		});
-		setItenaryData(...itenaryData, deleteItenerary);
 	};
 	return (
 		<div>

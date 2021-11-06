@@ -1,14 +1,15 @@
 /** @format */
 
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Itenaries from "../Components/Itenaries";
 const Home = () => {
 	const [itenaryData, setItenaryData] = useState(null);
+	const navigate = useNavigate();
 
 	// Retrieve all Itenerary
 	useEffect(() => {
-		fetch(`http://localhost:8000/itenaryList/?_limit=2`)
+		fetch(`http://localhost:8000/itenaryList`)
 			.then((res) => {
 				return res.json();
 			})
@@ -17,14 +18,8 @@ const Home = () => {
 			});
 	}, []);
 
-	// Remove Itenerary
-    const deleteItenary = (ItenaryId) => {
-        
-		// const newItenaries = itenaryData.filter(
-		// 	(itenary) => itenary.id !== ItenaryId
-		// );
-		// setItenaryData(newItenaries);
-
+	// Delete Itenerary
+	const deleteItenary = (ItenaryId) => {
 		const deleteItenerary = fetch(
 			`http://localhost:8000/itenaryList/` + ItenaryId,
 			{
@@ -32,9 +27,8 @@ const Home = () => {
 			}
 		).then(() => {
 			console.log("Itenary Deleted");
-			window.location.reload();
+			navigate("/");
 		});
-		setItenaryData(...itenaryData, deleteItenerary);
 	};
 	return (
 		<div>
