@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Additinerary from "../Pages/AddItinerary";
+import Itinerary from "../Pages/Itinerary";
 import AllItinerary from "../Pages/AllItinerary";
 import Contact from "../Pages/Contact";
 import Footer from "./Footer";
@@ -20,8 +21,9 @@ function Layout() {
 						<Route path="/" element={<Home />} />
 						<Route path="/about" element={<About />} />
 						<Route path="/contact" element={<Contact />} />
-						<Route path="/Add" element={<Additinerary />} />
-						<Route path="/All" element={<AllItinerary />} />
+						<Route path="/add" element={<Additinerary />} />
+						<Route path="/itinerary/:id" element={<Itinerary />} />
+						<Route path="/all" element={<AllItinerary />} />
 					</Routes>
 					<Footer />
 				</div>

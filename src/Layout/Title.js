@@ -14,6 +14,9 @@ const Title = () => {
 					<Link to="/">
 						<p className="text-blue-700 font-normal mx-5">Home</p>
 					</Link>
+					<Link to="/contact">
+						<p className="text-blue-700 font-normal mx-5">Contact</p>
+					</Link>
 					<Link to="/add">
 						<Button name="Add" />
 					</Link>
