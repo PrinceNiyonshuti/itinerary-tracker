@@ -18,7 +18,16 @@ function Itenaries({ itenaryData, deleteItenary }) {
 							<p className="font-normal text-gray-600">
 								{new Date(itenary.date).toLocaleDateString("en-US", {
 									weekday: "short",
-								})} at {itenary.time}
+								})}{" "}
+								at{" "}
+								{new Date(itenary.date + " " + itenary.time).toLocaleString(
+									"en-US",
+									{
+										hour: "numeric",
+										minute: "numeric",
+										hour12: true,
+									}
+								)}
 							</p>
 						</div>
 					</div>

@@ -8,7 +8,7 @@ const Home = () => {
 
 	// Retrieve all Itenerary
 	useEffect(() => {
-		fetch(`http://localhost:8000/itenaryList`)
+		fetch(`http://localhost:8000/itenaryList/?_limit=2`)
 			.then((res) => {
 				return res.json();
 			})
