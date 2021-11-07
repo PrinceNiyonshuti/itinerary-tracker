@@ -14,15 +14,6 @@ const TextArea = ({ id, rows,refData, placeholder }) => {
 				placeholder={placeholder}
 			/>
 		</div>
-		// <div className=" p-3 w-full">
-		// 	<textarea
-		// 		rows="3"
-		// 		id={id}
-		// 		required
-		// 		className="border p-2 rounded w-full"
-		// 		placeholder="Write something..."
-		// 	/>
-		// </div>
 	);
 };
 

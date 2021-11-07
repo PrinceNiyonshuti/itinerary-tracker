@@ -21,5 +21,42 @@
       "description": "What is a gym? A gym - physical exercises and activities performed inside, often using equipment, especially when done as a subject at school. Gymnasium is a large room with equipment for exercising the body and increasing strength or a club where you can go to exercise and keep fit.",
       "id": 3
     }
+  ],
+  "messageList": [
+    {
+      "userNames": "asda",
+      "email": "emmanziza1@gmail.com",
+      "subject": "asd",
+      "description": "sada",
+      "id": 1
+    },
+    {
+      "userNames": "prince niy",
+      "email": "princeniyonshuti47@gmail.com",
+      "subject": "asd",
+      "description": "asd",
+      "id": 2
+    },
+    {
+      "userNames": "prince niy",
+      "email": "princeniyonshuti47@gmail.com",
+      "subject": "asd",
+      "description": "asd",
+      "id": 3
+    },
+    {
+      "userNames": "prince niy",
+      "email": "princeniyonshuti47@gmail.com",
+      "subject": "asd",
+      "description": "asd",
+      "id": 4
+    },
+    {
+      "userNames": "prince niy",
+      "email": "princeniyonshuti47@gmail.com",
+      "subject": "asd",
+      "description": "asd",
+      "id": 5
+    }
   ]
 }
