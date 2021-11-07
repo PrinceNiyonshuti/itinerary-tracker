@@ -16,6 +16,7 @@
 - handling and mastering use of the state and conditional rendering
 - render by limits
 - concatinate script to watch json server and run app into single script
+- get data from api call and make a limit of data to retrieve
 
 # 2. Time Taken to Complete
 
