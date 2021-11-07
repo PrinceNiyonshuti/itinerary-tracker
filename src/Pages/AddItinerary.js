@@ -3,6 +3,8 @@
 import React, { useRef } from "react";
 import Button from "../Components/Button";
 import { useNavigate } from "react-router-dom";
+import Input from "../Components/Input";
+import TextArea from "../Components/TextArea";
 
 const AddItenary = () => {
 	const history = useNavigate();
@@ -40,44 +42,33 @@ const AddItenary = () => {
 			<form onSubmit={newItenary} ref={itenaryForm}>
 				<div className="flex">
 					<div className="w-full bg-white p-2 rounded">
-						<div className=" p-3 w-full">
-							<input
-								type="text"
-								id="title"
-								required
-								ref={itenaryTitle}
-								className="border p-2 rounded w-full"
-								placeholder="Itinerary Title"
-							/>
-						</div>
-						<div className=" p-3 w-full">
-							<input
-								type="date"
-								id="date"
-								required
-								ref={itenaryDate}
-								className="border p-2 rounded w-full"
-							/>
-						</div>
-						<div className=" p-3 w-full">
-							<input
-								type="time"
-								id="time"
-								required
-								ref={itenaryTime}
-								className="border p-2 rounded w-full"
-							/>
-						</div>
-						<div className=" p-3 w-full">
-							<textarea
-								rows="3"
-								id="description"
-								required
-								ref={itenaryDescription}
-								className="border p-2 rounded w-full"
-								placeholder="Write something..."
-							/>
-						</div>
+						<Input
+							type={"text"}
+							id={"title"}
+							refData={itenaryTitle}
+							placeholder={"Itinerary Title"}
+						/>
+
+						<Input
+							type={"date"}
+							id={"date"}
+							refData={itenaryDate}
+							placeholder={""}
+						/>
+
+						<Input
+							type={"time"}
+							id={"time"}
+							refData={itenaryTime}
+							placeholder={""}
+						/>
+
+						<TextArea
+							id={"description"}
+							rows={"3"}
+							refData={itenaryDescription}
+							placeholder={"Write something..."}
+						/>
 
 						<div className="flex justify-between mx-3">
 							<div>
