@@ -20,6 +20,20 @@
       "time": "18:00",
       "description": "What is a gym? A gym - physical exercises and activities performed inside, often using equipment, especially when done as a subject at school. Gymnasium is a large room with equipment for exercising the body and increasing strength or a club where you can go to exercise and keep fit.",
       "id": 3
+    },
+    {
+      "title": "Watch Cartoons",
+      "date": "2021-11-08",
+      "time": "19:30",
+      "description": "the list for cartoon to see is Vivo , Justice League and BatMan",
+      "id": 4
+    },
+    {
+      "title": "Do home chores",
+      "date": "2021-11-09",
+      "time": "07:00",
+      "description": "clean the house and maintain your coding space",
+      "id": 5
     }
   ],
   "messageList": [
