@@ -22,8 +22,9 @@ const AddItenary = () => {
 		const date = itenaryDate.current.value;
 		const time = itenaryTime.current.value;
 		const description = itenaryDescription.current.value;
+		const priority = false;
 
-		const itenary = { title, date, time, description };
+		const itenary = { title, date, time, description, priority };
 
 		fetch("http://localhost:8000/itenaryList", {
 			method: "POST",

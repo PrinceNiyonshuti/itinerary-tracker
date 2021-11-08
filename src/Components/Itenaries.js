@@ -4,12 +4,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Itenaries({ itenaryData, deleteItenary }) {
+	const handlePriority = (itineraryID) => {
+		const priority = true;
+		console.log(`clicked ${itineraryID} and ${priority}`);
+	};
+
 	return (
 		<div>
 			{itenaryData.map((itenary) => (
 				<li
 					key={itenary.id}
-					className="flex justify-between items-center bg-gray-200 mt-2 p-2 cursor-pointer transition">
+					className="flex justify-between items-center bg-gray-200 mt-2 p-2 cursor-pointer transition"
+					onClick={() => handlePriority(itenary.id)}>
 					<div className="flex ml-2">
 						<div className="flex flex-col ml-2">
 							<Link to={`/itinerary/${itenary.id}`}>

@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import Button from "../Components/Button";
 import Input from "../Components/Input";
+import Messages from "../Components/Messages";
 import TextArea from "../Components/TextArea";
 
 function Contact() {
@@ -26,13 +27,14 @@ function Contact() {
 		const contactData = { userNames, email, subject, description };
 
 		// Posting Data to Json file
-		fetch("http://localhost:8000/messageList", {
+		fetch("http://localhost:8000/messageList/?_sort=id&_order=desc", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(contactData),
 		}).then(() => {
 			console.log("New Message Sent");
 			alert(`Dear ${userNames} , Your Message Is Sent Successfully`);
+			window.location.reload();
 		});
 		contactForm.current.reset();
 	};
@@ -77,6 +79,8 @@ function Contact() {
 					</div>
 				</div>
 			</form>
+			<h3 className="font-bold text-2lg my-2">Recent Messages</h3>
+			<Messages />
 		</div>
 	);
 }
