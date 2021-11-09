@@ -5,7 +5,6 @@ import { ItineraryContext } from "../Contexts/ItineraryContext";
 
 const Messages = () => {
 	const { contactData } = useContext(ItineraryContext);
-
 	return (
 		<div>
 			{contactData &&

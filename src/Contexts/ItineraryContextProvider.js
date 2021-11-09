@@ -5,8 +5,8 @@ import { ItineraryContext } from "./ItineraryContext";
 
 const ItineraryContextProvider = (props) => {
 	const [itenaryData, setItenaryData] = useState(null);
-    const [itenaryAllData, setItenaryAllData] = useState(null);
-    const [contactData, setContactData] = useState(null);
+	const [itenaryAllData, setItenaryAllData] = useState(null);
+	const [contactData, setContactData] = useState(null);
 
 	// Retrieve all Itenerary with limit of 3
 	useEffect(() => {
@@ -102,20 +102,24 @@ const ItineraryContextProvider = (props) => {
 			window.location.reload();
 		});
 		contactForm.current.reset();
-    };
-    
-    
+	};
 
-		// Retrieve all Message list
-		useEffect(() => {
-			fetch(`http://localhost:8000/messageList`)
-				.then((res) => {
-					return res.json();
-				})
-				.then((data) => {
-					setContactData(data);
-				});
-		}, []);
+	// Retrieve all Message list
+	useEffect(() => {
+		fetch(`http://localhost:8000/messageList`)
+			.then((res) => {
+				return res.json();
+			})
+			.then((data) => {
+				setContactData(data);
+			});
+	}, []);
+
+	// Making Priority Itinerary
+	const handlePriority = (itineraryID) => {
+		const priority = true;
+		console.log(`clicked ${itineraryID} and ${priority}`);
+	};
 
 	const value = {
 		itenaryData,
@@ -132,8 +136,9 @@ const ItineraryContextProvider = (props) => {
 		contactEmail,
 		contactSubject,
 		contactMessage,
-        SendMessage,
-        contactData
+		SendMessage,
+		contactData,
+		handlePriority,
 	};
 	return (
 		<ItineraryContext.Provider value={value}>

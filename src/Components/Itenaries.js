@@ -1,13 +1,11 @@
 /** @format */
 
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-
+import { ItineraryContext } from "../Contexts/ItineraryContext";
 function Itenaries({ itenaryData, deleteItenary }) {
-	const handlePriority = (itineraryID) => {
-		const priority = true;
-		console.log(`clicked ${itineraryID} and ${priority}`);
-	};
+	
+	const { handlePriority } = useContext(ItineraryContext);
 
 	return (
 		<div>
@@ -24,8 +22,8 @@ function Itenaries({ itenaryData, deleteItenary }) {
 							<p className="font-normal text-gray-600">
 								{new Date(itenary.date).toLocaleDateString("en-US", {
 									weekday: "short",
-								})}{" "}
-								at{" "}
+								})}
+								&nbsp; at &nbsp;
 								{new Date(itenary.date + " " + itenary.time).toLocaleString(
 									"en-US",
 									{
