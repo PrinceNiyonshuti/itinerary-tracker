@@ -1,32 +1,12 @@
 /** @format */
 
-import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import Itenaries from "../Components/Itenaries";
+import { ItineraryContext } from "../Contexts/ItineraryContext";
+
 const Home = () => {
-	const [itenaryData, setItenaryData] = useState(null);
-	const navigate = useNavigate();
-
-	// Retrieve all Itenerary
-	useEffect(() => {
-		fetch(`http://localhost:8000/itenaryList/?_limit=2`)
-			.then((res) => {
-				return res.json();
-			})
-			.then((data) => {
-				setItenaryData(data);
-			});
-	}, []);
-
-	// Delete Itenerary
-	const deleteItenary = (ItenaryId) => {
-		fetch(`http://localhost:8000/itenaryList/` + ItenaryId, {
-			method: "DELETE",
-		}).then(() => {
-			console.log("Itinerary Deleted");
-			navigate("/");
-		});
-	};
+	const { itenaryData, deleteItenary } = useContext(ItineraryContext);
 	return (
 		<div>
 			<div className="w-full p-4">
