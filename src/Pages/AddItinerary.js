@@ -7,30 +7,6 @@ import TextArea from "../Components/TextArea";
 import { ItineraryContext } from "../Contexts/ItineraryContext";
 
 const AddItenary = () => {
-	
-
-	// const newItenary = (event) => {
-	// 	event.preventDefault();
-
-	// 	const title = itenaryTitle.current.value;
-	// 	const date = itenaryDate.current.value;
-	// 	const time = itenaryTime.current.value;
-	// 	const description = itenaryDescription.current.value;
-	// 	const priority = false;
-
-	// 	const itenary = { title, date, time, description, priority };
-
-	// 	fetch("http://localhost:8000/itenaryList", {
-	// 		method: "POST",
-	// 		headers: { "Content-Type": "application/json" },
-	// 		body: JSON.stringify(itenary),
-	// 	}).then(() => {
-	// 		console.log("New Itinerary added");
-	// 		history("/");
-	// 	});
-
-	// 	itenaryForm.current.reset();
-	// };
 
 	const {
 		newItenary,

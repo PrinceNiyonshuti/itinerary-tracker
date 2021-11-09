@@ -5,15 +5,27 @@ import { ItineraryContext } from "./ItineraryContext";
 
 const ItineraryContextProvider = (props) => {
 	const [itenaryData, setItenaryData] = useState(null);
+	const [itenaryAllData, setItenaryAllData] = useState(null);
 
-	// Retrieve all Itenerary
+	// Retrieve all Itenerary with limit of 3
 	useEffect(() => {
-		fetch(`http://localhost:8000/itenaryList/?_limit=2`)
+		fetch(`http://localhost:8000/itenaryList/?_limit=3`)
 			.then((res) => {
 				return res.json();
 			})
 			.then((data) => {
 				setItenaryData(data);
+			});
+	}, []);
+
+	// Retrieve all Itenerary
+	useEffect(() => {
+		fetch(`http://localhost:8000/itenaryList`)
+			.then((res) => {
+				return res.json();
+			})
+			.then((data) => {
+				setItenaryAllData(data);
 			});
 	}, []);
 
@@ -60,6 +72,7 @@ const ItineraryContextProvider = (props) => {
 
 	const value = {
 		itenaryData,
+		itenaryAllData,
 		newItenary,
 		itenaryTitle,
 		itenaryDate,
