@@ -5,13 +5,18 @@ import { Link } from "react-router-dom";
 import { ItineraryContext } from "../Contexts/ItineraryContext";
 function Itenaries({ itenaryData, deleteItenary }) {
 	const { handlePriority } = useContext(ItineraryContext);
-
+	const getPriorityItinerary = (priority) => {
+		let classes =
+			"flex justify-between items-center bg-gray-200 mt-2 p-2 cursor-pointer transition ";
+		classes += priority === true ? "border-l-4 border-green-700" : "";
+		return classes;
+	};
 	return (
 		<div>
 			{itenaryData.map((itenary) => (
 				<li
 					key={itenary.id}
-					className="flex justify-between items-center bg-gray-200 mt-2 p-2 cursor-pointer transition"
+					className={getPriorityItinerary(itenary.priority)}
 					onDoubleClick={() => handlePriority(itenary)}>
 					<div className="flex ml-2">
 						<div className="flex flex-col ml-2">
