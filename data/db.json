@@ -5,7 +5,7 @@
       "date": "2021-11-07",
       "time": "10:24",
       "description": "Curabitur aliquet quam id dui posuere blandit. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.",
-      "priority": true,
+      "priority": false,
       "id": 1
     },
     {
@@ -37,7 +37,7 @@
       "date": "2021-11-09",
       "time": "07:00",
       "description": "clean the house and maintain your coding space",
-      "priority": false,
+      "priority": true,
       "id": 5
     },
     {
