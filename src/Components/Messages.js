@@ -1,24 +1,15 @@
 /** @format */
 
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
+import { ItineraryContext } from "../Contexts/ItineraryContext";
 
 const Messages = () => {
-	const [contactMessage, setSontactMessage] = useState(null);
+	const { contactData } = useContext(ItineraryContext);
 
-	// Retrieve all Itenerary
-	useEffect(() => {
-		fetch(`http://localhost:8000/messageList`)
-			.then((res) => {
-				return res.json();
-			})
-			.then((data) => {
-				setSontactMessage(data);
-			});
-	}, []);
 	return (
 		<div>
-			{contactMessage &&
-				contactMessage.map((message) => (
+			{contactData &&
+				contactData.map((message) => (
 					<li
 						key={message.id}
 						className="flex justify-between items-center border-b-2 border-green-200 mt-2 p-2 cursor-pointer transition">

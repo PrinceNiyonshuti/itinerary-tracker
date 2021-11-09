@@ -5,7 +5,8 @@ import { ItineraryContext } from "./ItineraryContext";
 
 const ItineraryContextProvider = (props) => {
 	const [itenaryData, setItenaryData] = useState(null);
-	const [itenaryAllData, setItenaryAllData] = useState(null);
+    const [itenaryAllData, setItenaryAllData] = useState(null);
+    const [contactData, setContactData] = useState(null);
 
 	// Retrieve all Itenerary with limit of 3
 	useEffect(() => {
@@ -101,7 +102,20 @@ const ItineraryContextProvider = (props) => {
 			window.location.reload();
 		});
 		contactForm.current.reset();
-	};
+    };
+    
+    
+
+		// Retrieve all Message list
+		useEffect(() => {
+			fetch(`http://localhost:8000/messageList`)
+				.then((res) => {
+					return res.json();
+				})
+				.then((data) => {
+					setContactData(data);
+				});
+		}, []);
 
 	const value = {
 		itenaryData,
@@ -118,7 +132,8 @@ const ItineraryContextProvider = (props) => {
 		contactEmail,
 		contactSubject,
 		contactMessage,
-		SendMessage,
+        SendMessage,
+        contactData
 	};
 	return (
 		<ItineraryContext.Provider value={value}>
