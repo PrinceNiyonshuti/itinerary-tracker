@@ -1,42 +1,45 @@
 /** @format */
 
-import React, { useRef } from "react";
+import React, { useContext } from "react";
 import Button from "../Components/Button";
-import { useNavigate } from "react-router-dom";
 import Input from "../Components/Input";
 import TextArea from "../Components/TextArea";
+import { ItineraryContext } from "../Contexts/ItineraryContext";
 
 const AddItenary = () => {
-	const history = useNavigate();
-	// Form variables
-	const itenaryTitle = useRef();
-	const itenaryDate = useRef();
-	const itenaryTime = useRef();
-	const itenaryDescription = useRef();
-	const itenaryForm = useRef();
+	
 
-	const newItenary = (event) => {
-		event.preventDefault();
+	// const newItenary = (event) => {
+	// 	event.preventDefault();
 
-		const title = itenaryTitle.current.value;
-		const date = itenaryDate.current.value;
-		const time = itenaryTime.current.value;
-		const description = itenaryDescription.current.value;
-		const priority = false;
+	// 	const title = itenaryTitle.current.value;
+	// 	const date = itenaryDate.current.value;
+	// 	const time = itenaryTime.current.value;
+	// 	const description = itenaryDescription.current.value;
+	// 	const priority = false;
 
-		const itenary = { title, date, time, description, priority };
+	// 	const itenary = { title, date, time, description, priority };
 
-		fetch("http://localhost:8000/itenaryList", {
-			method: "POST",
-			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify(itenary),
-		}).then(() => {
-			console.log("New Itinerary added");
-			history("/");
-		});
+	// 	fetch("http://localhost:8000/itenaryList", {
+	// 		method: "POST",
+	// 		headers: { "Content-Type": "application/json" },
+	// 		body: JSON.stringify(itenary),
+	// 	}).then(() => {
+	// 		console.log("New Itinerary added");
+	// 		history("/");
+	// 	});
 
-		itenaryForm.current.reset();
-	};
+	// 	itenaryForm.current.reset();
+	// };
+
+	const {
+		newItenary,
+		itenaryTitle,
+		itenaryDate,
+		itenaryTime,
+		itenaryDescription,
+		itenaryForm,
+	} = useContext(ItineraryContext);
 	return (
 		<div>
 			<h3 className="font-bold text-lg mb-1 mx-5">New Itenary</h3>
