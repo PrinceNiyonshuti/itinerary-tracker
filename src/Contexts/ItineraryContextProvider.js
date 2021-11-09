@@ -70,6 +70,39 @@ const ItineraryContextProvider = (props) => {
 		itenaryForm.current.reset();
 	};
 
+	// Sending Contact Message
+	// Contact Form variables
+	const contactForm = useRef();
+	const contactNames = useRef();
+	const contactEmail = useRef();
+	const contactSubject = useRef();
+	const contactMessage = useRef();
+
+	// Function to send message
+	const SendMessage = (event) => {
+		event.preventDefault();
+
+		// Assigning Form Data
+		const userNames = contactNames.current.value;
+		const email = contactEmail.current.value;
+		const subject = contactSubject.current.value;
+		const description = contactMessage.current.value;
+
+		const contactData = { userNames, email, subject, description };
+
+		// Posting Contact Message Data to Json file
+		fetch("http://localhost:8000/messageList/?_sort=id&_order=desc", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(contactData),
+		}).then(() => {
+			console.log("New Message Sent");
+			alert(`Dear ${userNames} , Your Message Is Sent Successfully`);
+			window.location.reload();
+		});
+		contactForm.current.reset();
+	};
+
 	const value = {
 		itenaryData,
 		itenaryAllData,
@@ -80,6 +113,12 @@ const ItineraryContextProvider = (props) => {
 		itenaryDescription,
 		itenaryForm,
 		deleteItenary,
+		contactForm,
+		contactNames,
+		contactEmail,
+		contactSubject,
+		contactMessage,
+		SendMessage,
 	};
 	return (
 		<ItineraryContext.Provider value={value}>
