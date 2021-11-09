@@ -146,21 +146,6 @@ const ItineraryContextProvider = (props) => {
 				window.location.reload();
 			});
 		}
-
-		// const updateData = { title, date, time, description, priority };
-		// fetch(`http://localhost:8000/itenaryList/` + id, {
-		// 	method: "PUT",
-		// 	headers: {
-		// 		"Content-Type": "application/json",
-		// 	},
-		// 	body: JSON.stringify(updateData),
-		// }).then(() => {
-		// 	console.log("Itinerary Updated");
-		// 	window.location.reload();
-		// });
-
-		// alert(`clicked ${updateData} and ${priority}`);
-		// console.log(`clicked ${itineraryID.title} and ${priority}`);
 	};
 
 	const value = {

@@ -29,7 +29,7 @@
       "date": "2021-11-08",
       "time": "19:30",
       "description": "the list for cartoon to see is Vivo , Justice League and BatMan",
-      "priority": true,
+      "priority": false,
       "id": 4
     },
     {
@@ -37,7 +37,7 @@
       "date": "2021-11-09",
       "time": "07:00",
       "description": "clean the house and maintain your coding space",
-      "priority": true,
+      "priority": false,
       "id": 5
     },
     {
