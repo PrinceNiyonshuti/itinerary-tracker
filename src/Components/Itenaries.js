@@ -4,7 +4,6 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ItineraryContext } from "../Contexts/ItineraryContext";
 function Itenaries({ itenaryData, deleteItenary }) {
-	
 	const { handlePriority } = useContext(ItineraryContext);
 
 	return (
@@ -13,7 +12,7 @@ function Itenaries({ itenaryData, deleteItenary }) {
 				<li
 					key={itenary.id}
 					className="flex justify-between items-center bg-gray-200 mt-2 p-2 cursor-pointer transition"
-					onClick={() => handlePriority(itenary.id)}>
+					onDoubleClick={() => handlePriority(itenary)}>
 					<div className="flex ml-2">
 						<div className="flex flex-col ml-2">
 							<Link to={`/itinerary/${itenary.id}`}>
