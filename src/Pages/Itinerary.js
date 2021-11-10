@@ -23,13 +23,20 @@ const Itinerary = () => {
 					<h3 className="font-bold text-2xl my-2">{details.title}</h3>
 					<hr />
 					<p className="font-normal my-2">
-						<b>Day</b> : {new Date(details.date).toLocaleDateString("en-US", {
-								weekday: "long",
-							})}
+						<b>Day</b> :{" "}
+						{new Date(details.date).toLocaleDateString("en-US", {
+							weekday: "long",
+						})}
 						<br />
 						<b>Time</b> : {details.time}
 						<br />
+						{details.priority ? (
+							<span className="bg-green-600 text-white text-sm px-3 py-1 rounded-full">
+								✌🏻 Priority
+							</span>
+						) : ("")}
 					</p>
+
 					<p className="font-normal"></p>
 					<p className="font-normal text-justify my-2">{details.description}</p>
 				</div>

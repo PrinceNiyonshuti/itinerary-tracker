@@ -18,7 +18,7 @@ const Messages = () => {
 									From : {message.userNames}
 								</p>
 								<span className="text-sm">@{message.email}</span>
-								<p className="w-64 truncate">" {message.description} "</p>
+								<p className=" font-normal text-justify">" {message.description} "</p>
 							</div>
 						</div>
 					</li>
