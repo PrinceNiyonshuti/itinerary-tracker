@@ -116,8 +116,8 @@ const ItineraryContextProvider = (props) => {
 	}, []);
 
 	// Making Priority Itinerary
-	const handlePriority = (itineraryID) => {
-		const { id, title, date, time, description, priority } = itineraryID;
+	const handlePriority = (itineraryUpdate) => {
+		const { id, title, date, time, description, priority } = itineraryUpdate;
 
 		if (priority === true) {
 			const priority = false;
