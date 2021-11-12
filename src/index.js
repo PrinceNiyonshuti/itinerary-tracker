@@ -8,10 +8,10 @@ import { BrowserRouter } from "react-router-dom";
 import ItineraryContextProvider from "./Contexts/ItineraryContextProvider";
 
 ReactDOM.render(
-	<ItineraryContextProvider>
-		<BrowserRouter>
+	<BrowserRouter>
+		<ItineraryContextProvider>
 			<App />
-		</BrowserRouter>
-	</ItineraryContextProvider>,
+		</ItineraryContextProvider>
+	</BrowserRouter>,
 	document.getElementById("root")
 );

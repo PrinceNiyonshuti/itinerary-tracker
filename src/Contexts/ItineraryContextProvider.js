@@ -1,12 +1,15 @@
 /** @format */
 
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { ItineraryContext } from "./ItineraryContext";
 
 const ItineraryContextProvider = (props) => {
 	const [itenaryData, setItenaryData] = useState(null);
 	const [itenaryAllData, setItenaryAllData] = useState(null);
 	const [contactData, setContactData] = useState(null);
+
+	const navigate = useNavigate();
 
 	// Retrieve all Itenerary with limit of 3
 	useEffect(() => {
@@ -65,7 +68,10 @@ const ItineraryContextProvider = (props) => {
 			body: JSON.stringify(itinerary),
 		}).then(() => {
 			console.log("New Itinerary added");
-			// history("/");
+			
+			navigate("/");
+			window.location.reload();
+			
 		});
 
 		itenaryForm.current.reset();
