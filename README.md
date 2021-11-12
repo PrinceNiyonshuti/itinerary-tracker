@@ -27,7 +27,7 @@
 - the coding style is used was line coding and error control and
   the standard of using safe ,secure and portable codes
 
-# 4. Your source code files plus the final (e.g. compiled) result that can be opened directly in a browser
+# 4. Your source code files plus the final
 
 [Link To Repository](https://github.com/PrinceNiyonshuti/itinerary-tracker.git)
 [Link To Deployed App](https://itinerary-v3.netlify.app/)
@@ -42,7 +42,7 @@ before running the project first initialize the project to get tailwindcss modul
 
 ### to run the project
 
-    npx start
+    npm run prince
 
 # 6. Used resources and documentation
 
